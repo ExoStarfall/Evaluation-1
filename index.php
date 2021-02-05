@@ -49,7 +49,7 @@
 
                 $curl = curl_init(); /*On définit une variable curl, cURL va communique directement avec le serveur , curl_init va initialiser cette session */
 
-                $search = urlencode($_POST['search']); /*Ici on va créer une variable $search qui va servir d'ID, on va ensuite encoder la chaine de caractère pour la faire passer par l'URL */
+                $search = urlencode($_POST['search']); /*Ici on va créer une variable $search qui va servir d'ID, on va ensuite encoder la chaine de caractère pour la faire passer par l'URL et lire les caractères spéciaux  */
 
                 curl_setopt_array($curl, array(  /* Va fixer les options du transfert cURL ci dessous */
                     CURLOPT_URL => "https://api.hmz.tf/?id=$search", /*L'URL a aller chercher */
